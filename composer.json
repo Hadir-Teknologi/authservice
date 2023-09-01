@@ -1,0 +1,28 @@
+{
+    "name": "hadirteknologi/authservice",
+    "description": "Hadir Apps Auth Service",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hadirteknologi\\Authservice\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rifki Mubarok",
+            "email": "rifkimubarok1410+github@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "laravel/socialite": "^5.8"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hadirteknologi\\Authservice\\AuthserviceServiceProvider"
+            ]
+        }
+    }
+}
