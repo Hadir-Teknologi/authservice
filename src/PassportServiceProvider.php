@@ -1,6 +1,6 @@
 <?php
 
-namespace HadirTeknologi\AuthService;
+namespace Hadirteknologi\Authservice;
 
 use Laravel\Socialite\Two\User;
 use Laravel\Socialite\Two\AbstractProvider;

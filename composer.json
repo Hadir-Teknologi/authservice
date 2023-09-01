@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hadirteknologi\\Authservice\\AuthserviceServiceProvider"
+                "Hadirteknologi\\Authservice\\AuthServiceProvider"
             ]
         }
     }

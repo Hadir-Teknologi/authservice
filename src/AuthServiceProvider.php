@@ -1,6 +1,6 @@
 <?php
 
-namespace HadirTeknologi\AuthService;
+namespace Hadirteknologi\Authservice;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Socialite\Contracts\Factory;
@@ -17,7 +17,7 @@ class AuthServiceProvider extends ServiceProvider
         $socialite = $this->app->make(Factory::class);
         $socialite->extend('hadirauth', function () use ($socialite) {
             $config = config('services.hadirauth');
-            return $socialite->buildProvider(CasdoorProvider::class, $config);
+            return $socialite->buildProvider(PassportServiceProvider::class, $config);
         });
     }
 
