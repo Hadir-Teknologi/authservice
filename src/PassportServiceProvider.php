@@ -11,7 +11,7 @@ class PassportServiceProvider extends AbstractProvider
 
     protected function getHadirUrl()
     {
-        return config("services.hadirauth.base_uri");
+        return config("auth-service.hadirauth.base_uri");
     }
 
     function getAuthUrl($state)

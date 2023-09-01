@@ -16,6 +16,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
+        "php": "^7.4|^8.0.2",
         "laravel/socialite": "^5.8"
     },
     "extra": {
