@@ -16,17 +16,20 @@ class PassportServiceProvider extends AbstractProvider
 
     function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase($this->getHadirUrl() . "/login/oauth/authorize", $state);
+        $authUri = config("auth-service.hadirauth.auth_uri", '/login/oauth/authorize');
+        return $this->buildAuthUrlFromBase($this->getHadirUrl() . $authUri, $state);
     }
 
     function getTokenUrl()
     {
-        return $this->getHadirUrl() . "/api/login/oauth/access_token";
+        $tokenUri = config("auth-service.hadirauth.token_uri", '/api/login/oauth/access_token');
+        return $this->getHadirUrl() . $tokenUri;
     }
 
     function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get($this->getHadirUrl() . '/api/userinfo', [
+        $userUri = config("auth-service.hadirauth.user_info_uri", '/api/userinfo');
+        $response = $this->getHttpClient()->get($this->getHadirUrl() . $userUri, [
             'headers' => [
                 'cache-control' => 'no-cache',
                 'Authorization' => 'Bearer ' . $token,
